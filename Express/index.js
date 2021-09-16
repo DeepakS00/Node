@@ -24,5 +24,5 @@ app.listen(port, hostname, () => {
 // Express does not define any database-related behavior
 
 app.get("/getSyllabus", (req, res) => {
-    res.send("<h4><ul style='color:rgb(138, 64, 35);text-align:centre;'><li>Express</li><li>Nodemon</li><li>Postman</li><li>Body parser</li></ul></h4>")
+    res.send("<h4 style='color:rgb(138, 64, 35)';>Things to cover today:-</br><ul style='text-align:centre;'><li>Express</li><li>Nodemon</li><li>Postman</li><li>Body parser</li></ul></h4>")
 })
