@@ -1,12 +1,14 @@
 // importing express module
-
-
-const express = require('express');
-// returns a function to create an express app
+const express = require('express'); // returns a function to create an express app
+const about = require('./Routes/about');
+const syllabus = require('./Routes/syllabus');
 
 const app = express();
 const port = 3000;
 const hostname = "127.0.0.1";
+
+app.use('/about', about);
+app.use('/syllabus', syllabus);
 
 // route definition
 app.get('/', (request, reponse) => { 
@@ -22,7 +24,3 @@ app.listen(port, hostname, () => {
 })
 
 // Express does not define any database-related behavior
-
-app.get("/getSyllabus", (req, res) => {
-    res.send("<h4 style='color:rgb(138, 64, 35)';>Things to cover today:-</br><ul style='text-align:centre;'><li>Express</li><li>Nodemon</li><li>Postman</li><li>Body parser</li></ul></h4>")
-})
