@@ -1,9 +1,9 @@
 // importing express module
 const express = require('express'); // returns a function to create an express app
-const about = require('./Routes/about');
-const syllabus = require('./Routes/syllabus');
+const about = require('./routes/about');
+const syllabus = require('./routes/syllabus');
 // const bodyParser = require('body-parser');
-const sample = require('./Routes/sample');
+const sample = require('./routes/sample');
 
 
 const app = express();
